@@ -50,10 +50,13 @@ public class SqlqueryApplication implements CommandLineRunner {
 			System.out.println(cust);
 		}
 		
-	}
-	
-	
-	public void testInsertDataIntoSQLServer() {
+		SpringTranManagerCustomerTransaction springCustomerManager = new SpringTranManagerCustomerTransaction(jdbcTemplate);
+		
+		springCustomerManager.testInsert(false);
+		
+		
+		System.out.println("Application finished ... exiting ...");
+		System.exit(0);
 		
 	}
 	
